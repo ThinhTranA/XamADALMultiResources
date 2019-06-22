@@ -33,6 +33,8 @@ Click on the app, and set the Redirects URI that matched the redirect URI in ste
 
 (note: if this won't match the login screen will throw error doesn't set or not match URI).
 
+Another slightly different of using IPlatformParameters only instead of ILoginProvider : 
+https://github.com/TimLariviere/WoodenMoose.Samples.Xamarin_Authentication
 
 
 
