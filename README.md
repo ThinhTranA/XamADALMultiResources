@@ -1,5 +1,5 @@
 # Example of login with ADAL in Xamarin Forms and query multiple resoures
-In this example, the app query : 
+In this example, the app with a single signon acquire two `AccessToken` to query : 
 * Graph API
 * Backed Web API
 
