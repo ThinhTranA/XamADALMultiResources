@@ -6,6 +6,7 @@ using MvvmHelpers;
 using Xamarin.Forms;
 
 using XamADALMultiResources.Services;
+using System.Net.Http;
 
 namespace XamADALMultiResources
 {
@@ -19,9 +20,27 @@ namespace XamADALMultiResources
 
         private async Task ExecuteLoginCommand()
         {
-            var graphAccessToken = await DependencyService.Get<ILoginProvider>().LoginAsync();
+            var apiAccessToken = await DependencyService.Get<ILoginProvider>().LoginAsync();
 
-            
+            using (var client = new HttpClient())
+            {
+                var url = string.Format(Constants.ResourceApi + "/api/GetCases/GetAllCases");
+                HttpRequestMessage message = new HttpRequestMessage(HttpMethod.Get, url);
+                message.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("bearer", apiAccessToken);
+                HttpResponseMessage response = await client.SendAsync(message);
+                string responseString = await response.Content.ReadAsStringAsync();
+
+                if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    var contentBody = await response.Content.ReadAsStringAsync();
+                    //return JsonConvert.DeserializeObject<IEnumerable<CaseDetail>>(contentBody);
+                }
+                else
+                {
+                   // return Enumerable.Empty<CaseDetail>();
+                }
+
+            }
         }
     }
 }
