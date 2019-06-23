@@ -32,6 +32,7 @@ Follow these steps to fix this bug:
 * In the Allowed Token Audiences add your website URL as shown below (eg: `https://backendtestapi.azurewebsites.net/`)
 * Click OK
 * Click Save
+
 ![9](9.png)
 
 
