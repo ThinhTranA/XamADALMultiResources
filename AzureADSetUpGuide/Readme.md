@@ -37,7 +37,7 @@ Follow these steps to fix this bug:
 
 ## 2.Register Azure Active Directory for Mobile App 
 
-This is because Azure AD won’t issue access tokens to unknown clients. And We can authenticate ourselves directly in the browser, but the mobile can't yet.
+This is because Azure AD wonâ€™t issue access tokens to unknown clients. And We can authenticate ourselves directly in the browser, but the mobile can't yet.
 
 Under Azure Active Directory / App registrations , Click `New Registration`
 ![6](6.png)
@@ -52,14 +52,17 @@ Click on the app, and set the Redirects URI that matched the redirect URI in ste
 Select the App/ API permissions
 Click Add a permission
 Select APIs my organization uses
-Search for the name of the api(eg: `BackEndTestAPI)
+Search for the name of the api(eg: `BackEndTestAPI`)
+
 ![10](10.png)
 ![11](11.png)
+
 Select the app, tick `user_impersonation`
 Click Add permissions_
+
 ![12](12.png)
 
-API permissions will now look like this
+API permissions will now look like this:
 ![13](13.png)
 
 
