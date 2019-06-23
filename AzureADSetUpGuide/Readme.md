@@ -45,10 +45,14 @@ Under Azure Active Directory / App registrations , Click `New Registration`
 
 The App can now be found under Owned applications, since you created manually
 ![7](7.png)
-Click on the app, and set the Redirects URI that matched the redirect URI in step 1.
+
+Click on the app, and under `Overview` set the Redirects URI that matched the redirect URI in step 1.
+
 ![8](8.png)
 
 (Note: if this won't match the login screen will throw error doesn't set or not match URI).
+
+
 
 Select the App/ API permissions
 Click Add a permission
