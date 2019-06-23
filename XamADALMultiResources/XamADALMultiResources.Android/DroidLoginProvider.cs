@@ -25,7 +25,7 @@ namespace XamADALMultiResources.Droid
         }
         public async Task<string> LoginAsync()
         {
-            return await LoginWithGraphResource();
+            return await LoginAndReturnToken();
         }
 
         public Task LogOutAsync()
@@ -34,7 +34,7 @@ namespace XamADALMultiResources.Droid
         }
 
 
-        private async Task<string> LoginWithGraphResource()
+        private async Task<string> LoginAndReturnToken()
         {
             var authContext = new AuthenticationContext(Constants.Authority);
             if (authContext.TokenCache.ReadItems().Any())
@@ -50,11 +50,13 @@ namespace XamADALMultiResources.Droid
                new Uri(Constants.RedirectUri),
                new PlatformParameters((Activity)RootView));
 
+                // Getting AccessToken for Graph API can be done like this
                 var authResult22 = await authContext.AcquireTokenSilentAsync(
               Constants.ResourceGraph,
               Constants.ClientId);
+                string graphAccessToken = authResult22.AccessToken; // use this to query graph api.
 
-                return authResult.AccessToken;
+                return authResult.AccessToken; // This is the token to query our web API
             }
             catch (Exception ex)
             {

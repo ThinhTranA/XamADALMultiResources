@@ -22,6 +22,7 @@ namespace XamADALMultiResources
         {
             var apiAccessToken = await DependencyService.Get<ILoginProvider>().LoginAsync();
 
+
             using (var client = new HttpClient())
             {
                 var url = string.Format(Constants.ResourceApi + "/api/GetCases/GetAllCases");

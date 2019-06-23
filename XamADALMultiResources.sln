@@ -9,13 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamADALMultiResources.iOS",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XamADALMultiResources", "XamADALMultiResources\XamADALMultiResources\XamADALMultiResources.csproj", "{8548450A-4694-4B26-8CA1-88B567B93602}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E575DAFE-A408-46D2-850B-EB43472E122B}"
-	ProjectSection(SolutionItems) = preProject
-		Readme.md = Readme.md
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AzureADSetUpGuide", "AzureADSetUpGuide", "{E5C669DB-79BF-43D3-86A6-F4596994AEE5}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,9 +76,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{E575DAFE-A408-46D2-850B-EB43472E122B} = {E5C669DB-79BF-43D3-86A6-F4596994AEE5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {48B032B6-ECE4-4B79-86A5-E97085F880BB}
