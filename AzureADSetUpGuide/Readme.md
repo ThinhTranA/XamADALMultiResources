@@ -47,7 +47,22 @@ The App can now be found under Owned applications, since you created manually
 Click on the app, and set the Redirects URI that matched the redirect URI in step 1.
 ![8](8.png)
 
-(note: if this won't match the login screen will throw error doesn't set or not match URI).
+(Note: if this won't match the login screen will throw error doesn't set or not match URI).
+
+Select the App/ API permissions
+Click Add a permission
+Select APIs my organization uses
+Search for the name of the api(eg: `BackEndTestAPI)
+![10](10.png)
+![11](11.png)
+Select the app, tick `user_impersonation`
+Click Add permissions_
+![12](12.png)
+
+API permissions will now look like this
+![13](13.png)
+
+
 
 Another slightly different of using IPlatformParameters only instead of ILoginProvider : 
 https://github.com/TimLariviere/WoodenMoose.Samples.Xamarin_Authentication
