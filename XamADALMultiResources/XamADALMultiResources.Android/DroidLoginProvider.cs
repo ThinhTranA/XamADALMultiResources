@@ -44,8 +44,12 @@ namespace XamADALMultiResources.Droid
 
             try
             {
+             // It is best to use Resoure Id (App Client Id) instead of Url (ResourceApi) like this here, 
+             //because depending on how the Azure AD is configure, it might throw Unauthorized error using the URL
+             //using App Client Id (eg: 5b0a54d9-cb05-4852-9919-df341e069f41) is the safest choice. 
+            
                 var authResult = await authContext.AcquireTokenAsync(
-               Constants.ResourceApi,
+               Constants.ResourceApi,       
                Constants.ClientId,
                new Uri(Constants.RedirectUri),
                new PlatformParameters((Activity)RootView));
